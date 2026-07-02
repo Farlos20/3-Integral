@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#2E0710">
+  <title>Turma 3º Ano — Cápsula do Tempo 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <svg width="22" height="22" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="30" cy="34" rx="18" ry="20" fill="#C4607A"/>
+        <ellipse cx="23" cy="18" rx="8" ry="9" fill="#C4607A"/>
+        <ellipse cx="37" cy="18" rx="8" ry="9" fill="#C4607A"/>
+        <circle cx="23" cy="10" r="3" fill="#6B1A2B"/><circle cx="37" cy="10" r="3" fill="#6B1A2B"/>
+        <ellipse cx="30" cy="38" rx="10" ry="12" fill="#A83A50"/>
+        <circle cx="25" cy="26" r="3.5" fill="white"/><circle cx="35" cy="26" r="3.5" fill="white"/>
+        <circle cx="25.8" cy="26.8" r="1.8" fill="#1A0810"/><circle cx="35.8" cy="26.8" r="1.8" fill="#1A0810"/>
+        <ellipse cx="30" cy="32" rx="4" ry="2.5" fill="#E88099"/>
+        <path d="M24 35 Q27 37 30 35 Q33 37 36 35" stroke="#6B1A2B" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      </svg>
+      3º Ano - Integral <span class="dot">·</span> 2026
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#videos">Vídeos</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#timeline">Linha do Tempo</a></li>
+      <li><a href="#mascotes">Mascotes</a></li>
+      <li><a href="#professores">Professores</a></li>
+      <li><a href="#mural">Mural</a></li>
+      <li><a href="#formatura">Formatura</a></li>
+      <li><a href="#futuro">Futuro</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-mesh"></div>
+    <div id="sparkleContainer"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">✦ Cápsula do Tempo Digital · 2026 ✦</div>
+        <h1 class="hero-title">Nossa <em>História</em><br>Inesquecível</h1>
+        <p class="hero-sub">3º Ano do Ensino Médio Integral — Turma Vinho</p>
+        <p class="hero-desc">Um espaço criado com carinho para guardar cada riso, cada aprendizado, cada lágrima e cada vitória que compartilhamos juntos neste ano que transformou todos nós.</p>
+        <a href="#galeria" class="hero-cta">✦ Explorar Memórias</a>
+      </div>
+      <div class="hero-mascots">
+        <div class="mascot-wrapper">
+          <svg class="pantera-svg" width="180" height="220" viewBox="0 0 180 220" fill="none">
+            <ellipse cx="90" cy="145" rx="52" ry="60" fill="#E8729A"/>
+            <ellipse cx="90" cy="75" rx="44" ry="42" fill="#E8729A"/>
+            <ellipse cx="58" cy="40" rx="14" ry="18" fill="#E8729A" transform="rotate(-15 58 40)"/>
+            <ellipse cx="122" cy="40" rx="14" ry="18" fill="#E8729A" transform="rotate(15 122 40)"/>
+            <ellipse cx="58" cy="40" rx="7" ry="10" fill="#C4506A" transform="rotate(-15 58 40)"/>
+            <ellipse cx="122" cy="40" rx="7" ry="10" fill="#C4506A" transform="rotate(15 122 40)"/>
+            <ellipse cx="90" cy="152" rx="30" ry="40" fill="#F0A0BB"/>
+            <ellipse cx="90" cy="88" rx="22" ry="16" fill="#F5B8CC"/>
+            <ellipse cx="76" cy="68" rx="8" ry="9" fill="white"/><ellipse cx="104" cy="68" rx="8" ry="9" fill="white"/>
+            <circle cx="77" cy="69" r="5" fill="#1A0810"/><circle cx="105" cy="69" r="5" fill="#1A0810"/>
+            <circle cx="79" cy="67" r="1.8" fill="white"/><circle cx="107" cy="67" r="1.8" fill="white"/>
+            <ellipse cx="90" cy="83" rx="5" ry="3.5" fill="#A83060"/>
+            <path d="M80 90 Q90 98 100 90" stroke="#A83060" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <line x1="50" y1="86" x2="78" y2="88" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <line x1="48" y1="91" x2="76" y2="91" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <line x1="102" y1="88" x2="130" y2="86" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <line x1="104" y1="91" x2="132" y2="91" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <path d="M138 190 C165 175 170 155 155 140 C148 133 140 138 145 148 C150 158 145 165 135 160" stroke="#E8729A" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <circle cx="133" cy="158" r="8" fill="#E8729A"/>
+            <ellipse cx="65" cy="200" rx="18" ry="10" fill="#E8729A"/><ellipse cx="115" cy="200" rx="18" ry="10" fill="#E8729A"/>
+            <ellipse cx="55" cy="206" rx="5" ry="3.5" fill="#C4506A"/><ellipse cx="65" cy="208" rx="5" ry="3.5" fill="#C4506A"/>
+            <ellipse cx="75" cy="206" rx="5" ry="3.5" fill="#C4506A"/><ellipse cx="105" cy="206" rx="5" ry="3.5" fill="#C4506A"/>
+            <ellipse cx="115" cy="208" rx="5" ry="3.5" fill="#C4506A"/><ellipse cx="125" cy="206" rx="5" ry="3.5" fill="#C4506A"/>
+            <circle cx="90" cy="62" r="12" fill="none" stroke="#C9953A" stroke-width="2.5" opacity="0.85"/>
+            <line x1="78" y1="60" x2="68" y2="57" stroke="#C9953A" stroke-width="2" opacity="0.85"/>
+            <line x1="102" y1="60" x2="112" y2="57" stroke="#C9953A" stroke-width="2" opacity="0.85"/>
+          </svg>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;">
+          <p class="mascot-label">Os mascotes da turma</p>
+          <div class="mascot-wrapper">
+            <svg class="coca-svg" width="90" height="200" viewBox="0 0 90 200" fill="none">
+              <rect x="30" y="5" width="30" height="18" rx="5" fill="#C9953A"/>
+              <rect x="28" y="20" width="34" height="6" rx="2" fill="#A8781A"/>
+              <rect x="32" y="26" width="26" height="22" rx="4" fill="#CC0000"/>
+              <path d="M24 48 C18 55 14 68 14 80 L14 160 C14 175 26 185 45 185 C64 185 76 175 76 160 L76 80 C76 68 72 55 66 48 Z" fill="#CC0000"/>
+              <path d="M20 65 C17 75 16 95 17 120 L20 120 C19 95 20 75 23 65 Z" fill="rgba(255,255,255,0.15)"/>
+              <rect x="16" y="90" width="58" height="70" rx="8" fill="white" opacity="0.92"/>
+              <text x="45" y="112" text-anchor="middle" font-family="serif" font-size="9" font-weight="bold" fill="#CC0000" letter-spacing="0.5">COCA</text>
+              <path d="M22 118 Q45 122 68 118" stroke="#CC0000" stroke-width="1.5" fill="none"/>
+              <text x="45" y="132" text-anchor="middle" font-family="serif" font-size="9" font-weight="bold" fill="#CC0000" letter-spacing="0.5">COLA</text>
+              <ellipse cx="45" cy="183" rx="31" ry="9" fill="#AA0000"/>
+              <path d="M30 50 L35 85" stroke="rgba(255,255,255,0.2)" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll"><div class="scroll-line"></div><span>Rolar</span></div>
+  </section>
+
+  <!-- STRIP - MARQUEE INFINITO -->
+  <div class="mascot-strip">
+    <div class="strip-track">
+      <div class="strip-group">
+        <div class="strip-item"><span>🐆</span> Turma Pantera</div><div class="strip-dot"></div>
+        <div class="strip-item"><span>🍾</span> Cor Vinho 2026</div><div class="strip-dot"></div>
+        <div class="strip-item"><span>🥤</span> Espírito Coca-Cola</div><div class="strip-dot"></div>
+        <div class="strip-item"><span>🎓</span> Ensino Médio Integral</div><div class="strip-dot"></div>
+        <div class="strip-item"><span>❤️</span> Amizade Eterna</div><div class="strip-dot"></div>
+        <div class="strip-item"><span>✨</span> Memórias Para Sempre</div><div class="strip-dot"></div>
+      </div>
+      <div class="strip-group" aria-hidden="true">
+        <div class="strip-item"><span>🐆</span> Turma Pantera</div><div class="strip-dot"></div>
+        <div class="strip-item"><span>🍾</span> Cor Vinho 2026</div><div class="strip-dot"></div>
+        <div class="strip-item"><span>🥤</span> Espírito Coca-Cola</div><div class="strip-dot"></div>
+        <div class="strip-item"><span>🎓</span> Ensino Médio Integral</div><div class="strip-dot"></div>
+        <div class="strip-item"><span>❤️</span> Amizade Eterna</div><div class="strip-dot"></div>
+        <div class="strip-item"><span>✨</span> Memórias Para Sempre</div><div class="strip-dot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== GALERIA ===== -->
+  <section id="galeria">
+    <div class="container">
+      <div class="reveal">
+        <div class="sec-label">📸 Memórias Visuais</div>
+        <h2 class="sec-title">Nossa <em>Galeria</em></h2>
+        <p class="sec-desc">Toque em qualquer foto para expandir e navegar como um story. Cada momento guardado é parte de quem somos.</p>
+      </div>
+      <div class="gallery-grid reveal reveal-delay-1" id="galleryGrid">
+        {% for foto in fotos %}
+        <div class="photo-card" onclick="openLightbox({{ loop.index0 }})">
+          <img
+            src="{{ url_for('static', filename='uploads/' + foto) }}"
+            alt="{{ foto }}"
+            loading="lazy">
+          <div class="photo-label">{{ foto.replace('.jpeg','').replace('.jpg','').replace('.png','').replace('_',' ') }}</div>
+          <div class="photo-expand-hint">👆 Toque para expandir</div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="gallery-actions reveal reveal-delay-3">
+        <div class="gallery-count" id="galleryCount">
+          📸 Mostrando {{ fotos|length }} de {{ total_fotos }} fotos
+        </div>
+        <a href="/fotos" class="btn-ver-todos">🖼️ Ver Todas as Fotos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX STORY ===== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
+    <!-- Story progress bar -->
+    <div class="lb-progress-bar" id="lbProgressBar">
+      <!-- dots injetados via JS -->
+    </div>
+
+    <!-- Header info -->
+    <div class="lb-header">
+      <div class="lb-header-left">
+        <div class="lb-avatar">📸</div>
+        <div>
+          <div class="lb-username">Turma Vinho 2026</div>
+          <div class="lb-timestamp" id="lbTimestamp">Foto 1 de N</div>
+        </div>
+      </div>
+      <button class="lb-close" onclick="closeLightbox()" aria-label="Fechar">✕</button>
+    </div>
+
+    <!-- Image area (click zones left/right) -->
+    <div class="lb-image-area">
+      <div class="lb-zone lb-zone-left" onclick="lbPrev()" aria-label="Anterior"></div>
+      <img id="lbImg" class="lb-img" alt="Foto da turma" src="">
+      <div class="lb-zone lb-zone-right" onclick="lbNext()" aria-label="Próxima"></div>
+    </div>
+
+    <!-- Arrow buttons (visible on desktop) -->
+    <button class="lb-arrow lb-arrow-left" onclick="lbPrev()" aria-label="Anterior">&#10094;</button>
+    <button class="lb-arrow lb-arrow-right" onclick="lbNext()" aria-label="Próxima">&#10095;</button>
+
+    <!-- Caption -->
+    <div class="lb-caption" id="lbCaption"></div>
+
+    <!-- Swipe hint (mobile only) -->
+    <div class="lb-swipe-hint">← deslize →</div>
+  </div>
+  <div class="lb-overlay" id="lbOverlay" onclick="closeLightbox()"></div>
+
+
+  <!-- ===== VÍDEOS ===== -->
+  <section id="videos">
+    <div class="container">
+      <div class="reveal">
+        <div class="sec-label">🎬 Momentos em Movimento</div>
+        <h2 class="sec-title">Nossos <em>Vídeos</em></h2>
+        <p class="sec-desc">Assista, relembre e compartilhe. As memórias que se movem, que têm som, que têm vida.</p>
+      </div>
+
+      <!-- Video category tabs -->
+      <div class="video-tabs reveal reveal-delay-1">
+        <button class="video-tab active" data-vcat="todos">🎬 Todos</button>
+        <button class="video-tab" data-vcat="momentos">😂 Momentos</button>
+        <button class="video-tab" data-vcat="esportes">💪 Esportes</button>
+        <button class="video-tab" data-vcat="geral">✨ Geral</button>
+      </div>
+
+      <div class="video-grid" id="videoGrid">
+        {% for video in videos %}
+        <div class="video-card reveal" data-vcat="{{ video.categoria }}">
+          <video controls preload="metadata" playsinline class="video-player">
+            <source src="{{ url_for('static', filename='videos/' + video.arquivo) }}" type="video/mp4">
+          </video>
+          <div class="video-info">
+            <div class="video-cat-badge">{{ video.categoria }}</div>
+            <h4>{{ video.title }}</h4>
+            <p>📅 {{ video.data }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="video-actions reveal reveal-delay-2">
+        <a href="/videos" class="btn-ver-todos">🎬 Ver Todos os Vídeos</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section id="depoimentos">
+    <div class="container">
+      <div class="reveal">
+        <div class="sec-label">💬 Palavras do Coração</div>
+        <h2 class="sec-title">Relatos & <em>Depoimentos</em></h2>
+        <p class="sec-desc">As histórias que valem ser contadas, as palavras que precisam ser guardadas para sempre.</p>
+      </div>
+      <div class="testimonials-grid" id="testimonialsContainer">
+        <div class="testimonial-card reveal reveal-delay-1">
+          <p class="t-text">Esse ano me ensinou que crescer não é perder a leveza, é descobrir que você é mais forte do que imagina. Guardo cada um de vocês no peito.</p>
+          <div class="t-author"><div class="t-avatar">C</div><div><div class="t-name">Clara Silva</div><div class="t-role">Aluna · Turma Vinho</div></div></div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <p class="t-text">Foram três anos construindo sonhos lado a lado. O que aprendemos juntos vai muito além dos conteúdos — aprendemos a ser humanos melhores.</p>
+          <div class="t-author"><div class="t-avatar" style="background:linear-gradient(135deg,#6B1A2B,#4A0E1B);">V</div><div><div class="t-name">Prof. Vanessa</div><div class="t-role">Professora de Filosofia</div></div></div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-3">
+          <p class="t-text">A gente se despediu com choro, mas vai se reencontrar com saudade. Essa turma foi especial desde o primeiro dia. Que cada um de vocês brilhe muito.</p>
+          <div class="t-author"><div class="t-avatar" style="background:linear-gradient(135deg,#A83A50,#6B1A2B);">T</div><div><div class="t-name">Prof. Tiago</div><div class="t-role">Professor de Matemática</div></div></div>
+        </div>
+      </div>
+      <button class="add-btn reveal" onclick="openModal('testimonialModal')">✍️ Deixar Meu Depoimento</button>
+    </div>
+  </section>
+
+  <!-- ===== LINHA DO TEMPO ===== -->
+  <section id="timeline">
+    <div class="container">
+      <div class="reveal">
+        <div class="sec-label">📅 Nossa Trajetória</div>
+        <h2 class="sec-title">Linha do <em>Tempo</em></h2>
+        <p class="sec-desc">Os capítulos de uma história que começou pequena e cresceu maior do que qualquer um esperava.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Fevereiro 2026</div><div class="tl-title">🌱 Início do Ano Letivo</div><div class="tl-desc">O começo de tudo. Rostos novos, expectativas, nervosismo e aquela energia única do primeiro dia. A Turma Vinho se encontrou e a história começou.</div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:var(--gold);box-shadow:0 0 0 2px var(--gold);"></div><div class="tl-date">Março 2026</div><div class="tl-title">🔬 Feira de Ciências</div><div class="tl-desc">A turma surpreendeu a todos com projetos inovadores. Semanas de trabalho, muita pesquisa e parcerias que se tornaram amizades para a vida.</div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:var(--wine-light);box-shadow:0 0 0 2px var(--wine-light);"></div><div class="tl-date">Maio 2026</div><div class="tl-title">✈️ Viagem Cultural</div><div class="tl-desc">Dias que ninguém vai esquecer. Risadas às 3 da manhã, amizades que se aprofundaram e histórias que vão durar a vida toda.</div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:var(--rose);box-shadow:0 0 0 2px var(--rose);"></div><div class="tl-date">Agosto 2026</div><div class="tl-title">🎭 Semana Cultural</div><div class="tl-desc">Talentos escondidos vieram à tona. A turma se apresentou com garra, criatividade e muita dedicação para toda a escola.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Outubro 2026</div><div class="tl-title">📝 ENEMs & Vestibulares</div><div class="tl-desc">A hora da verdade. Apoio mútuo, madrugadas de estudo e o orgulho de ver cada colega dar o seu máximo. A turma foi junto até o fim.</div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:var(--gold);box-shadow:0 0 0 5px rgba(201,149,58,0.25);"></div><div class="tl-date">Dezembro 2026</div><div class="tl-title">🎓 Formatura</div><div class="tl-desc">O capítulo mais emocionante. Toga, diploma e muitas lágrimas de alegria. O começo de um novo e imenso capítulo para cada um.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONQUISTAS ===== -->
+  <section id="conquistas">
+    <div class="container">
+      <div class="reveal">
+        <div class="sec-label">🏆 Orgulho da Turma</div>
+        <h2 class="sec-title">Nossas <em>Conquistas</em></h2>
+        <p class="sec-desc">Cada prêmio, cada nota, cada suspensão — tudo que ficará marcado para sempre na nossa história.</p>
+      </div>
+      <div class="conquistas-grid reveal reveal-delay-1">
+        <div class="conquista-card"><span class="c-icon">🥇</span><div class="c-title">1º Lugar na Olimpíada</div><div class="c-desc">Medalha de ouro na Olimpíada Estadual, representando a escola com excelência.</div></div>
+        <div class="conquista-card"><span class="c-icon">🎓</span><div class="c-title">100% de Aprovação</div><div class="c-desc">Toda a turma concluiu o Ensino Médio — uma conquista coletiva inesquecível.</div></div>
+        <div class="conquista-card"><span class="c-icon">🌍</span><div class="c-title">Projeto Social</div><div class="c-desc">Ações solidárias que impactaram dezenas de famílias da nossa comunidade.</div></div>
+        <div class="conquista-card"><span class="c-icon">🎤</span><div class="c-title">Melhor Apresentação</div><div class="c-desc">Vencemos o Festival Cultural com música, teatro e dança numa performance inesquecível.</div></div>
+        <div class="conquista-card"><span class="c-icon">📚</span><div class="c-title">Maior Média da Escola</div><div class="c-desc">Maior média geral do colégio no segundo semestre — resultado de muito esforço coletivo.</div></div>
+        <div class="conquista-card"><span class="c-icon">💡</span><div class="c-title">Projeto de Inovação</div><div class="c-desc">Finalistas no programa regional de inovação estudantil com solução real para a comunidade.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MASCOTES ===== -->
+  <section id="mascotes">
+    <div class="mascotes-inner">
+      <div style="display:flex;justify-content:center;" class="reveal">
+        <div class="mascot-wrapper">
+          <svg width="220" height="270" viewBox="0 0 180 220" fill="none">
+            <ellipse cx="90" cy="145" rx="52" ry="60" fill="#E8729A"/>
+            <ellipse cx="90" cy="75" rx="44" ry="42" fill="#E8729A"/>
+            <ellipse cx="58" cy="40" rx="14" ry="18" fill="#E8729A" transform="rotate(-15 58 40)"/>
+            <ellipse cx="122" cy="40" rx="14" ry="18" fill="#E8729A" transform="rotate(15 122 40)"/>
+            <ellipse cx="58" cy="40" rx="7" ry="10" fill="#C4506A" transform="rotate(-15 58 40)"/>
+            <ellipse cx="122" cy="40" rx="7" ry="10" fill="#C4506A" transform="rotate(15 122 40)"/>
+            <ellipse cx="90" cy="152" rx="30" ry="40" fill="#F0A0BB"/>
+            <ellipse cx="90" cy="88" rx="22" ry="16" fill="#F5B8CC"/>
+            <ellipse cx="76" cy="68" rx="8" ry="9" fill="white"/><ellipse cx="104" cy="68" rx="8" ry="9" fill="white"/>
+            <circle cx="77" cy="69" r="5" fill="#1A0810"/><circle cx="105" cy="69" r="5" fill="#1A0810"/>
+            <circle cx="79" cy="67" r="1.8" fill="white"/><circle cx="107" cy="67" r="1.8" fill="white"/>
+            <ellipse cx="90" cy="83" rx="5" ry="3.5" fill="#A83060"/>
+            <path d="M80 90 Q90 98 100 90" stroke="#A83060" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <line x1="50" y1="86" x2="78" y2="88" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <line x1="48" y1="91" x2="76" y2="91" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <line x1="102" y1="88" x2="130" y2="86" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <line x1="104" y1="91" x2="132" y2="91" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+            <path d="M138 190 C165 175 170 155 155 140 C148 133 140 138 145 148 C150 158 145 165 135 160" stroke="#E8729A" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <circle cx="133" cy="158" r="8" fill="#E8729A"/>
+            <ellipse cx="65" cy="200" rx="18" ry="10" fill="#E8729A"/><ellipse cx="115" cy="200" rx="18" ry="10" fill="#E8729A"/>
+            <ellipse cx="55" cy="206" rx="5" ry="3.5" fill="#C4506A"/><ellipse cx="65" cy="208" rx="5" ry="3.5" fill="#C4506A"/>
+            <ellipse cx="75" cy="206" rx="5" ry="3.5" fill="#C4506A"/><ellipse cx="105" cy="206" rx="5" ry="3.5" fill="#C4506A"/>
+            <ellipse cx="115" cy="208" rx="5" ry="3.5" fill="#C4506A"/><ellipse cx="125" cy="206" rx="5" ry="3.5" fill="#C4506A"/>
+            <path d="M68 110 Q90 118 112 110" stroke="#6B1A2B" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <circle cx="90" cy="115" r="7" fill="#8B2539"/><circle cx="90" cy="115" r="4" fill="#C9953A"/>
+            <rect x="62" y="37" width="56" height="8" rx="2" fill="#4A0E1B"/>
+            <polygon points="90,14 65,38 115,38" fill="#4A0E1B"/>
+            <line x1="115" y1="37" x2="128" y2="55" stroke="#C9953A" stroke-width="2"/>
+            <circle cx="128" cy="57" r="4" fill="#C9953A"/>
+          </svg>
+        </div>
+      </div>
+      <div class="mascote-desc reveal reveal-delay-2">
+        <div class="sec-label">🐆 Identidade da Turma</div>
+        <h2 class="sec-title" style="color:white;">Nossos <em>Mascotes</em></h2>
+        <p class="sec-desc">A Pantera representa nossa elegância, individualidade e o jeito inconfundível de ser. A Coca-Cola representa nossa energia, nossa efervescência e a leveza com que encaramos tudo.</p>
+        <div style="margin-top:1.5rem;display:flex;gap:0.8rem;flex-wrap:wrap;">
+          <div class="mascote-badge-item"><div style="font-size:1.5rem;margin-bottom:0.2rem;">🐆</div><div>Elegância</div></div>
+          <div class="mascote-badge-item"><div style="font-size:1.5rem;margin-bottom:0.2rem;">🥤</div><div>Energia</div></div>
+          <div class="mascote-badge-item"><div style="font-size:1.5rem;margin-bottom:0.2rem;">🍷</div><div>Cor Vinho</div></div>
+          <div class="mascote-badge-item"><div style="font-size:1.5rem;margin-bottom:0.2rem;">❤️</div><div>União</div></div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;" class="reveal reveal-delay-3">
+        <div class="mascot-wrapper">
+          <svg class="coca-svg" width="140" height="310" viewBox="0 0 90 200" fill="none">
+            <rect x="30" y="5" width="30" height="18" rx="5" fill="#C9953A"/>
+            <rect x="27" y="21" width="36" height="7" rx="3" fill="#A8781A"/>
+            <rect x="32" y="28" width="26" height="20" rx="4" fill="#BB0000"/>
+            <path d="M24 48 C18 55 14 68 14 80 L14 160 C14 175 26 185 45 185 C64 185 76 175 76 160 L76 80 C76 68 72 55 66 48 Z" fill="#CC0000"/>
+            <path d="M20 65 C17 75 16 100 17 130 L21 130 C20 100 21 75 24 65 Z" fill="rgba(255,255,255,0.18)"/>
+            <rect x="15" y="88" width="60" height="74" rx="9" fill="white" opacity="0.94"/>
+            <text x="45" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#CC0000" letter-spacing="1">COCA</text>
+            <text x="45" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#CC0000" letter-spacing="1">COLA</text>
+            <ellipse cx="45" cy="184" rx="31" ry="9" fill="#AA0000"/>
+            <path d="M28 52 L33 88" stroke="rgba(255,255,255,0.25)" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="45" cy="3" r="2.5" fill="rgba(255,255,255,0.3)">
+              <animate attributeName="cy" values="3;-10;3" dur="2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROFESSORES ===== -->
+  <section id="professores">
+    <div class="container">
+      <div class="reveal">
+        <div class="sec-label">👨‍🏫 Nossos Guias</div>
+        <h2 class="sec-title">Os <em>Professores</em></h2>
+        <p class="sec-desc">As pessoas que acreditaram em nós quando duvidávamos de nós mesmos. A eles, nossa eterna gratidão.</p>
+      </div>
+      <div class="professores-grid">
+        <div class="prof-card reveal reveal-delay-1"><div class="prof-avatar">👩‍🏫</div><div class="prof-name">Prof Tiago</div><div class="prof-subject">Matemática</div><div class="prof-msg">"Vocês provaram que qualquer equação se resolve com persistência e carinho."</div></div>
+        <div class="prof-card reveal reveal-delay-2"><div class="prof-avatar">👨‍🔬</div><div class="prof-name">Prof. Shirlon</div><div class="prof-subject">Química</div><div class="prof-msg">"Ensinei ciências, mas aprendi humanidade com vocês todos os dias."</div></div>
+        <div class="prof-card reveal reveal-delay-3"><div class="prof-avatar">👩‍💻</div><div class="prof-name">Profª Aline</div><div class="prof-subject">Língua Portuguesa</div><div class="prof-msg">"As palavras que escrevemos juntos foram as mais bonitas que já li na minha carreira."</div></div>
+        <div class="prof-card reveal reveal-delay-4"><div class="prof-avatar">👨‍🎨</div><div class="prof-name">Prof. Edson</div><div class="prof-subject">História</div><div class="prof-msg">"Vocês são a prova de que o futuro está em boas mãos. Que orgulho imenso."</div></div>
+        <div class="prof-card reveal reveal-delay-1"><div class="prof-avatar">👩‍🌾</div><div class="prof-name">Profª Emily</div><div class="prof-subject">Biologia</div><div class="prof-msg">"Cada um de vocês é um ecossistema único. Cuidem-se e cuidem do mundo."</div></div>
+        <div class="prof-card reveal reveal-delay-2"><div class="prof-avatar">👨‍🏃</div><div class="prof-name">Profª Alesandra</div><div class="prof-subject">Educação Física</div><div class="prof-msg">"Dentro e fora da quadra, mostraram que trabalho em equipe é o maior dos superpoderes."</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MURAL ===== -->
+  <section id="mural">
+    <div class="container">
+      <div class="reveal">
+        <div class="sec-label">📝 Quadro de Memórias</div>
+        <h2 class="sec-title">Mural de <em>Mensagens</em></h2>
+        <p class="sec-desc">Frases que inspiram, agradecimentos que aquecem e recordações que nunca devem ser esquecidas.</p>
+      </div>
+      <div class="mural-grid reveal reveal-delay-1" id="muralContainer">
+        <div class="mural-note"><p class="mural-text">"A melhor turma que já tive o prazer de conviver. Que a vida seja generosa com cada um de vocês."</p><span class="mural-from">— Coordenação Pedagógica</span></div>
+        <div class="mural-note"><p class="mural-text">"Valeu cada momento, cada risada no corredor, cada estudo até tarde. Vocês são para sempre."</p><span class="mural-from">— Arthur, Aluno</span></div>
+        <div class="mural-note"><p class="mural-text">"Que os sonhos de hoje sejam as conquistas de amanhã. Nunca percam a fome de crescer."</p><span class="mural-from">— Prof. Eli</span></div>
+        <div class="mural-note"><p class="mural-text">"Obrigado por me fazerem acreditar que era possível. Vocês salvaram meu ano."</p><span class="mural-from">— Guilherme M, Aluno</span></div>
+        <div class="mural-note"><p class="mural-text">"Escola é muito mais do que sala de aula — é onde a gente encontra a si mesmo."</p><span class="mural-from">— Ana Clara, Aluna</span></div>
+        <div class="mural-note"><p class="mural-text">"O que construímos aqui não se apaga. Essa turma vinho deixou uma marca permanente."</p><span class="mural-from">— Prof Julio</span></div>
+      </div>
+      <button class="add-btn outline reveal" onclick="openModal('muralModal')">✍️ Deixar Mensagem no Mural</button>
+    </div>
+  </section>
+
+  <!-- ===== FORMATURA ===== -->
+  <section id="formatura">
+    <div class="container">
+      <div class="formatura-inner">
+        <div class="reveal">
+          <div class="sec-label">🎓 O Grande Dia</div>
+          <h2 class="sec-title">Cerimônia de<br><em>Formatura</em></h2>
+          <p class="sec-desc">O momento mais esperado do ano. A celebração de tudo que construímos juntos, com toga vinho e muita emoção.</p>
+          <p style="font-size:0.82rem;color:rgba(255,255,255,0.4);margin-top:0.8rem;font-family:'Cormorant Garamond',serif;font-style:italic;">📍 12 de Dezembro de 2026 — 19h</p>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <p style="font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.9rem;text-align:center;">Contagem Regressiva</p>
+          <div class="countdown">
+            <div class="cd-unit"><span class="cd-num" id="days">--</span><span class="cd-label">Dias</span></div>
+            <div class="cd-unit"><span class="cd-num" id="hours">--</span><span class="cd-label">Horas</span></div>
+            <div class="cd-unit"><span class="cd-num" id="minutes">--</span><span class="cd-label">Min</span></div>
+            <div class="cd-unit"><span class="cd-num" id="seconds">--</span><span class="cd-label">Seg</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FUTURO ===== -->
+  <section id="futuro">
+    <div class="container">
+      <div class="reveal">
+        <div class="sec-label">🌟 Onde Estaremos</div>
+        <h2 class="sec-title">Sonhos para o <em>Futuro</em></h2>
+        <p class="sec-desc">Cada estudante deixou aqui um pedacinho do seu amanhã. Para quando olharmos para trás e vermos onde chegamos.</p>
+      </div>
+      <div class="futuro-grid" id="futuroContainer">
+        <div class="futuro-card reveal reveal-delay-1"><span class="f-emoji">🏥</span><div class="f-name">Gabriel Silva</div><div class="f-dream">"Em 2030, quero estar cursando medicina e criando projetos de saúde comunitária."</div><div class="f-year">📆 Revisitar em 2030</div></div>
+        <div class="futuro-card reveal reveal-delay-2"><span class="f-emoji">💻</span><div class="f-name">Carlos Eduardo</div><div class="f-dream">"Vou trabalhar com inteligência artificial. Meu sonho é criar tecnologia que ajude quem mais precisa."</div><div class="f-year">📆 Revisitar em 2030</div></div>
+        <div class="futuro-card reveal reveal-delay-3"><span class="f-emoji">✏️</span><div class="f-name">Guilherme P</div><div class="f-dream">"Quero publicar meu primeiro livro. As histórias que tenho dentro de mim precisam existir no mundo."</div><div class="f-year">📆 Revisitar em 2028</div></div>
+        <div class="futuro-card reveal reveal-delay-4"><span class="f-emoji">🌎</span><div class="f-name">Henrique Alves</div><div class="f-dream">"Estudar fora do Brasil por pelo menos um ano. Quero ver o mundo com os meus próprios olhos."</div><div class="f-year">📆 Revisitar em 2027</div></div>
+      </div>
+      <button class="add-btn outline reveal" onclick="openModal('futuroModal')">🌟 Deixar Meu Sonho Aqui</button>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-bottom:1.5rem;position:relative;flex-wrap:wrap;">
+      <svg width="50" height="62" viewBox="0 0 180 220" fill="none" opacity="0.5">
+        <ellipse cx="90" cy="145" rx="52" ry="60" fill="#E8729A"/>
+        <ellipse cx="90" cy="75" rx="44" ry="42" fill="#E8729A"/>
+        <ellipse cx="76" cy="68" rx="8" ry="9" fill="white"/><ellipse cx="104" cy="68" rx="8" ry="9" fill="white"/>
+        <circle cx="77" cy="69" r="5" fill="#1A0810"/><circle cx="105" cy="69" r="5" fill="#1A0810"/>
+      </svg>
+      <div>
+        <div class="footer-logo">Turma <span>Vinho</span> · 2026</div>
+        <div class="footer-tagline">"O que foi vivido juntos nunca é perdido — apenas transformado em saudade."</div>
+      </div>
+      <svg width="30" height="65" viewBox="0 0 90 200" fill="none" opacity="0.5">
+        <rect x="30" y="5" width="30" height="18" rx="5" fill="#C9953A"/>
+        <path d="M24 48 C18 55 14 68 14 80 L14 160 C14 175 26 185 45 185 C64 185 76 175 76 160 L76 80 C76 68 72 55 66 48 Z" fill="#CC0000"/>
+        <rect x="15" y="88" width="60" height="74" rx="9" fill="white" opacity="0.7"/>
+        <ellipse cx="45" cy="184" rx="31" ry="9" fill="#AA0000"/>
+      </svg>
+    </div>
+    <div class="footer-divider"></div>
+    <div style="margin-bottom:1rem;">
+      <a href="/videos" style="color:var(--rose);font-size:0.8rem;text-decoration:none;border:1px solid rgba(212,132,154,0.3);padding:0.4rem 1rem;border-radius:20px;">🎬 Ver todos os vídeos</a>
+    </div>
+    <div class="footer-credits">Cápsula do Tempo Digital · Ensino Médio Integral · 2026<br>Feito com ❤️ vinho para durar para sempre · 🐆 Turma Pantera + 🥤 Coca-Cola</div>
+  </footer>
+
+  <!-- ===== MODALS ===== -->
+  <div class="modal-overlay" id="testimonialModal">
+    <div class="modal">
+      <h3>💬 Deixar Depoimento</h3>
+      <input type="text" id="t-name" placeholder="Seu nome"/>
+      <select id="t-role"><option value="">Você é...</option><option>Aluno(a)</option><option>Professor(a)</option><option>Funcionário(a)</option><option>Família</option></select>
+      <textarea id="t-text" placeholder="Escreva seu depoimento, lembrança ou mensagem para a turma..."></textarea>
+      <div class="modal-actions">
+        <button class="btn-cancel" onclick="closeModal('testimonialModal')">Cancelar</button>
+        <button class="btn-submit" onclick="addTestimonial()">Publicar ✓</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="muralModal">
+    <div class="modal">
+      <h3>📝 Mensagem no Mural</h3>
+      <input type="text" id="m-name" placeholder="Seu nome ou apelido"/>
+      <textarea id="m-text" placeholder="Uma frase, uma lembrança, um agradecimento..." style="min-height:80px;"></textarea>
+      <div class="modal-actions">
+        <button class="btn-cancel" onclick="closeModal('muralModal')">Cancelar</button>
+        <button class="btn-submit" onclick="addMural()">Fixar no Mural ✓</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="futuroModal">
+    <div class="modal">
+      <h3>🌟 Meu Sonho para o Futuro</h3>
+      <input type="text" id="f-name" placeholder="Seu nome"/>
+      <input type="text" id="f-emoji" placeholder="Um emoji que te representa 🎯"/>
+      <textarea id="f-text" placeholder="Onde você se vê daqui a 5 ou 10 anos?"></textarea>
+      <input type="text" id="f-year" placeholder="Ano para revisitar (ex: 2030)"/>
+      <div class="modal-actions">
+        <button class="btn-cancel" onclick="closeModal('futuroModal')">Cancelar</button>
+        <button class="btn-submit" onclick="addDream()">Guardar Sonho ✓</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#2E0710">
+  <title>Todas as Fotos — Turma Vinho 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Cormorant+Garamond:ital,wght@1,300;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body { background: var(--blush); }
+
+    .fp-header {
+      background: linear-gradient(145deg, var(--wine-deep), var(--wine-dark), var(--wine));
+      padding: 6rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .fp-header::before {
+      content: '📸';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 20vw; opacity: 0.04; pointer-events: none;
+    }
+    .fp-header .sec-label { justify-content: center; color: var(--rose); }
+    .fp-header .sec-label::before { background: var(--rose); }
+    .fp-header .sec-title { color: white; }
+    .fp-header .sec-title em { color: var(--rose); }
+    .fp-header p { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin: 0 auto; max-width: 480px; line-height: 1.7; }
+    .fp-back {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7); text-decoration: none;
+      padding: 0.5rem 1.1rem; border-radius: 50px;
+      font-size: 0.78rem; font-weight: 500;
+      margin-bottom: 2rem; transition: all 0.25s;
+    }
+    .fp-back:hover { background: rgba(255,255,255,0.15); color: white; }
+
+    .fp-tabs {
+      display: flex; gap: 0.5rem; flex-wrap: wrap;
+      justify-content: center; margin: 2rem 1.5rem 0;
+    }
+    .fp-tab {
+      padding: 0.45rem 1.1rem; border-radius: 20px; font-size: 0.78rem; font-weight: 500;
+      cursor: pointer; border: 1.5px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.6);
+      transition: all 0.25s; font-family: 'DM Sans', sans-serif;
+    }
+    .fp-tab.active, .fp-tab:hover {
+      background: var(--wine); border-color: var(--wine); color: white;
+    }
+
+    .fp-grid {
+      max-width: 1200px; margin: 2.5rem auto 0;
+      padding: 0 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.9rem;
+    }
+    @media(max-width:600px){
+      .fp-grid { grid-template-columns: repeat(2,1fr); gap: 0.6rem; padding: 0 1rem 3rem; }
+    }
+
+    .fp-count {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.78rem;
+      padding: 0 1rem 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <svg width="22" height="22" viewBox="0 0 60 60" fill="none">
+      <ellipse cx="30" cy="34" rx="18" ry="20" fill="#C4607A"/>
+      <ellipse cx="23" cy="18" rx="8" ry="9" fill="#C4607A"/>
+      <ellipse cx="37" cy="18" rx="8" ry="9" fill="#C4607A"/>
+      <circle cx="25" cy="26" r="3.5" fill="white"/><circle cx="35" cy="26" r="3.5" fill="white"/>
+      <circle cx="25.8" cy="26.8" r="1.8" fill="#1A0810"/><circle cx="35.8" cy="26.8" r="1.8" fill="#1A0810"/>
+    </svg>
+    3º Ano <span class="dot">·</span> 2026
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Início</a></li>
+    <li><a href="/videos">Vídeos</a></li>
+    <li><a href="/#depoimentos">Depoimentos</a></li>
+    <li><a href="/#mural">Mural</a></li>
+    <li><a href="/#formatura">Formatura</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<div class="fp-header">
+  <a href="/" class="fp-back">← Voltar ao Início</a>
+  <div class="sec-label" style="justify-content:center;">📸 Acervo Completo</div>
+  <h1 class="sec-title" style="color:white; text-align:center;">Todas as <em>Fotos</em></h1>
+  <p>Cada clique aqui guardado é um pedaço da nossa história. Toque em qualquer foto para expandir e navegar como um story.</p>
+</div>
+
+<!-- TABS -->
+<div class="fp-tabs">
+  <button class="gallery-tab active" onclick="filterTab(event)">Todos</button>
+  <button class="gallery-tab" onclick="filterTab(event)">Momentos</button>
+  <button class="gallery-tab" onclick="filterTab(event)">Grupos</button>
+  <button class="gallery-tab" onclick="filterTab(event)">Individual</button>
+</div>
+
+<!-- GRID -->
+<div class="fp-grid" id="galleryGrid">
+  {% for foto in fotos %}
+  <div class="photo-card" onclick="openLightbox({{ loop.index0 }})">
+    <img
+      src="{{ url_for('static', filename='uploads/' + foto) }}"
+      alt="{{ foto }}"
+      loading="lazy">
+    <div class="photo-label">{{ foto.replace('.jpeg','').replace('.jpg','').replace('.png','').replace('_',' ') }}</div>
+    <div class="photo-expand-hint">👆 Toque para expandir</div>
+  </div>
+  {% endfor %}
+</div>
+<div class="fp-count">📸 {{ fotos|length }} fotos na galeria</div>
+
+<!-- LIGHTBOX STORY -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos">
+  <div class="lb-progress-bar" id="lbProgressBar"></div>
+  <div class="lb-header">
+    <div class="lb-header-left">
+      <div class="lb-avatar">📸</div>
+      <div>
+        <div class="lb-username">Turma Vinho 2026</div>
+        <div class="lb-timestamp" id="lbTimestamp">Foto 1 de N</div>
+      </div>
+    </div>
+    <button class="lb-close" onclick="closeLightbox()" aria-label="Fechar">✕</button>
+  </div>
+  <div class="lb-image-area">
+    <div class="lb-zone lb-zone-left" onclick="lbPrev()" aria-label="Anterior"></div>
+    <img id="lbImg" class="lb-img" alt="Foto da turma" src="">
+    <div class="lb-zone lb-zone-right" onclick="lbNext()" aria-label="Próxima"></div>
+  </div>
+  <button class="lb-arrow lb-arrow-left" onclick="lbPrev()" aria-label="Anterior">&#10094;</button>
+  <button class="lb-arrow lb-arrow-right" onclick="lbNext()" aria-label="Próxima">&#10095;</button>
+  <div class="lb-caption" id="lbCaption"></div>
+  <div class="lb-swipe-hint">← deslize →</div>
+</div>
+<div class="lb-overlay" id="lbOverlay" onclick="closeLightbox()"></div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
